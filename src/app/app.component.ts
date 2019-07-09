@@ -9,25 +9,17 @@ import { Todo } from './models/Todo';
 export class AppComponent {
   todos: Todo[] = JSON.parse(localStorage.getItem('todos')) || [];
 
-  /* todos: Todo[] = [{
-    id: '1',
-    text: 'Aprender Angular',
-    completed: false,
-    createdAt: new Date(),
-  }];
- */
-
   addNewTodo(text: string) {
     let newTodo: Todo = {
       id: `todo-${Math.random() * 99}`,
       text,
       completed: false,
       createdAt: new Date(),
+      color: 'black'
     };
 
     this.todos.push(newTodo);
     this.saveToLocalStorage();
-
   }
 
   saveToLocalStorage() {
@@ -47,5 +39,17 @@ export class AppComponent {
       return todo;
     });
     this.saveToLocalStorage();
-  }
+  };
+
+  changeColor(ev) {
+    let id = ev.id;
+    let color = ev.color;
+    this.todos = this.todos.map( todo => {
+      if(todo.id === id) {
+        todo.color = color;
+      }
+      return todo;
+    })
+    this.saveToLocalStorage();
+    }
 }

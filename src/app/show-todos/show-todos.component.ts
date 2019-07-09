@@ -11,12 +11,19 @@ export class ShowTodosComponent {
   @Input() data: Todo[];
   @Output() deleteTodo = new EventEmitter<string>();
   @Output() completedTodo = new EventEmitter<string>();
+  @Output() changeColor = new EventEmitter<object>();
 
-  emitDeleteId(id){
+  emitDeleteId(id) {
     this.deleteTodo.emit(id);
   }
 
-  emitCompletedId(id){
+  emitCompletedId(id) {
     this.completedTodo.emit(id);
+  }
+
+  emitChangeColor(id, color) {
+    console.log(id,color);
+    this.changeColor.emit( {id, color});
+
   }
  }
