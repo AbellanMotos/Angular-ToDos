@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ShowTodosComponent } from './show-todos/show-todos.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
+import { FormatDatePipe } from './format-date.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowTodosComponent,
-    AddTodoComponent
+    AddTodoComponent,
+    FormatDatePipe
   ],
   imports: [
     BrowserModule,
