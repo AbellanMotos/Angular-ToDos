@@ -15,7 +15,7 @@ export class AppComponent {
       text,
       completed: false,
       createdAt: new Date(),
-      color: 'black'
+      color: 'yellow'
     };
 
     this.todos.push(newTodo);
