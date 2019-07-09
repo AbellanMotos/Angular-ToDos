@@ -1,7 +1,11 @@
 
 <app-add-todo (newTodo)="addNewTodo($event)"></app-add-todo>
 
-<app-show-todos [data]="todos"  (deleteTodo)="removeTodo($event)"></app-show-todos>
+<app-show-todos 
+    [data]="todos"  
+    (deleteTodo)="removeTodo($event)"  
+    (completedTodo)="toggleCompleted($event)"
+></app-show-todos>
 
 
 <!-- OTRA MANERA DE HACERLO -->

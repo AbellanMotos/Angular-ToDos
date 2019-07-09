@@ -2,10 +2,17 @@
     display: flex;
     flex-flow: row wrap;
     padding: 2em;
+    
     .todo-item{
         max-width: 200px;
         padding: 1.5em;
         background-color: grey;
         margin: 1em;
+        transition: all 1s ease;
+    }
+    .completed {
+        opacity: 0.3;
+        background: green;
+        color: white;
     }
 }

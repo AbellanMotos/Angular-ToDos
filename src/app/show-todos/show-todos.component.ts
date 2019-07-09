@@ -10,10 +10,13 @@ import { Todo } from '../models/Todo';
 export class ShowTodosComponent {
   @Input() data: Todo[];
   @Output() deleteTodo = new EventEmitter<string>();
+  @Output() completedTodo = new EventEmitter<string>();
 
-  emiteDeleteId(id){
+  emitDeleteId(id){
     this.deleteTodo.emit(id);
   }
 
-  
+  emitCompletedId(id){
+    this.completedTodo.emit(id);
+  }
  }

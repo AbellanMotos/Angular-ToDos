@@ -38,4 +38,14 @@ export class AppComponent {
     this.todos = this.todos.filter(todo => todo.id !== id);
     this.saveToLocalStorage();
   }
+
+  toggleCompleted(id: string) {
+    this.todos = this.todos.map( todo => {
+      if (todo.id === id) {
+        todo.completed = !todo.completed;
+      }
+      return todo;
+    });
+    this.saveToLocalStorage();
+  }
 }
