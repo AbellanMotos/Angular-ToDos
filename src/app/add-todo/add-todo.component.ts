@@ -17,7 +17,7 @@ export class AddTodoComponent implements OnInit {
 
   addTodo(text){
     this.newTodo.emit(text);
-    this.task = ''
+    this.task = '';
   }
 
 }

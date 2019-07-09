@@ -1,4 +1,9 @@
-<p>show-todos works!</p>
+
+<div class="show-todos">
+    <div class="todo-item">
 <div *ngFor="let task of data">
     <h1>{{task.text}}</h1>
+    <p>is completed: {{task.completed}}</p>
+    <button (click)="emiteDeleteId(task.id)">X</button>
+</div>
 </div>

@@ -1,0 +1,11 @@
+.show-todos {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 2em;
+    .todo-item{
+        max-width: 200px;
+        padding: 1.5em;
+        background-color: grey;
+        margin: 1em;
+    }
+}

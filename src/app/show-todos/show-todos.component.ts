@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Todo } from '../models/Todo';
 
 @Component({
@@ -9,4 +9,11 @@ import { Todo } from '../models/Todo';
 
 export class ShowTodosComponent {
   @Input() data: Todo[];
+  @Output() deleteTodo = new EventEmitter<string>();
+
+  emiteDeleteId(id){
+    this.deleteTodo.emit(id);
+  }
+
+  
  }
